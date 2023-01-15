@@ -1,9 +1,9 @@
 export class MarsRover {
     private static map = {
-      f: (position: { forward: () => any }) => position.forward(),
-      b: (position: { backward: () => any }) => position.backward(),
-      l: (position: { turnLeft: () => any }) => position.turnLeft(),
-      r: (position: { turnRight: () => any }) => position.turnRight(),
+      f: (position: { forward: () => string }) => position.forward(),
+      b: (position: { backward: () => string }) => position.backward(),
+      l: (position: { turnLeft: () => string }) => position.turnLeft(),
+      r: (position: { turnRight: () => string }) => position.turnRight(),
     }
     private position: Position
   
@@ -11,7 +11,7 @@ export class MarsRover {
       this.position = position
     }
   
-    public move(commands: string) {
+    public move(commands:string) {
       commands.split('').map((command) => {
         try {
           MarsRover.map[command](this.position)
@@ -24,7 +24,7 @@ export class MarsRover {
   
   export class Direction {
     private static map = {
-      N: {left: 'W', right: 'E', forward: {x: 0, y: 1}, backward: {x: 0, y: -1}},
+      N: {left:'W', right: 'E', forward: {x: 0, y: 1}, backward: {x: 0, y: -1}},
       W: {left: 'S', right: 'N', forward: {x: -1, y: 0}, backward: {x: 1, y: 0}},
       S: {left: 'E', right: 'W', forward: {x: 0, y: -1}, backward: {x: 0, y: 1}},
       E: {left: 'N', right: 'S', forward: {x: 1, y: 0}, backward: {x: -1, y: 0}}

@@ -65,3 +65,11 @@ before the next one can move.
 
 Output
 For each Rover, the output represents its final position (final coordinates and where it is facing
+
+Run the tests as follows:
+
+- Clone down your new repository to your computer
+
+- Navigate to the directory on your command line
+
+- Run `npm install` followed by `npm test` to run the tests
