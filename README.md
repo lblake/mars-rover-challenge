@@ -68,7 +68,7 @@ For each Rover, the output represents its final position (final coordinates and 
 
 Run the tests as follows:
 
-- Clone down your new repository to your computer
+- Clone the repository to your computer
 
 - Navigate to the directory on your command line
 
